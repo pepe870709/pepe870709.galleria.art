@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Reproductions - Pepe's Art Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Pepe's Art Gallery</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Gallery</a></li>
+                <li><a href="reproductions.html" class="active">Reproductions</a></li>
+                <li><a href="biography.html">Biography</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h2>Order Art Reproductions</h2>
+            <p>High-quality prints of original artwork available for your home or office</p>
+        </section>
+
+        <section class="reproductions-info">
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>Print Quality</h3>
+                    <p>Professional giclée prints on museum-quality paper or canvas using archival inks for lasting color and detail.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Available Sizes</h3>
+                    <ul>
+                        <li>Small: 8" × 10"</li>
+                        <li>Medium: 11" × 14"</li>
+                        <li>Large: 16" × 20"</li>
+                        <li>Extra Large: 24" × 30"</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>Pricing</h3>
+                    <ul>
+                        <li>Small Print: $45</li>
+                        <li>Medium Print: $85</li>
+                        <li>Large Print: $125</li>
+                        <li>Extra Large: $185</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="order-form-section">
+            <h2>Place Your Order</h2>
+            <form class="order-form" id="orderForm">
+                <div class="form-group">
+                    <label for="customerName">Full Name *</label>
+                    <input type="text" id="customerName" name="customerName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="artwork">Select Artwork *</label>
+                    <select id="artwork" name="artwork" required>
+                        <option value="">Choose an artwork...</option>
+                        <option value="abstract-dreams-1">Abstract Dreams #1</option>
+                        <option value="sunset-symphony">Sunset Symphony</option>
+                        <option value="urban-reflections">Urban Reflections</option>
+                        <option value="natures-whisper">Nature's Whisper</option>
+                        <option value="emotional-depths">Emotional Depths</option>
+                        <option value="color-revolution">Color Revolution</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="size">Print Size *</label>
+                    <select id="size" name="size" required>
+                        <option value="">Choose a size...</option>
+                        <option value="small">Small - 8" × 10" ($45)</option>
+                        <option value="medium">Medium - 11" × 14" ($85)</option>
+                        <option value="large">Large - 16" × 20" ($125)</option>
+                        <option value="extra-large">Extra Large - 24" × 30" ($185)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="material">Print Material *</label>
+                    <select id="material" name="material" required>
+                        <option value="">Choose material...</option>
+                        <option value="paper">Premium Paper (+$0)</option>
+                        <option value="canvas">Gallery Canvas (+$25)</option>
+                        <option value="metal">Metal Print (+$40)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">Quantity *</label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="shipping">Shipping Address *</label>
+                    <textarea id="shipping" name="shipping" rows="4" placeholder="Enter your complete shipping address..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Special Instructions</label>
+                    <textarea id="notes" name="notes" rows="3" placeholder="Any special requests or notes..."></textarea>
+                </div>
+
+                <div class="order-summary" id="orderSummary">
+                    <h3>Order Summary</h3>
+                    <div class="summary-line">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">$0.00</span>
+                    </div>
+                    <div class="summary-line">
+                        <span>Shipping:</span>
+                        <span id="shipping-cost">$15.00</span>
+                    </div>
+                    <div class="summary-line total">
+                        <span>Total:</span>
+                        <span id="total">$15.00</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Place Order</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Pepe's Art Gallery. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Instagram">📷</a>
+                <a href="#" aria-label="Facebook">📘</a>
+                <a href="#" aria-label="Email">✉️</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

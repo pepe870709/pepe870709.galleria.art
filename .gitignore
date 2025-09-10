@@ -1,0 +1,20 @@
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Dependencies (if using npm/node in future)
+node_modules/
+dist/
+build/
