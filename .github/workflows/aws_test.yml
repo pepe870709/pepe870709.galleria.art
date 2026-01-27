@@ -1,0 +1,24 @@
+name: AWS Connection Test
+on: 
+  workflow_dispatch: # This allows you to click a button to run it
+
+permissions:
+  id-token: write   # This is the "OIDC Badge" - REQUIRED
+  contents: read    # This lets it read your code
+
+jobs:
+  check-connection:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v3
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: us-west-1 # Change this if your RDS is in another region
+          role-session-name: GitHubActionsTest
+
+      - name: The "Who Am I" Check
+        run: aws sts get-caller-identity
